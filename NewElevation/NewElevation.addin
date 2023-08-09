@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RevitAddIns>
+  <AddIn Type="Command">
+    <Text>NewElevation - Command 1</Text>
+    <Description>Some description for NewElevation</Description>
+    <Assembly>NewElevation.dll</Assembly>
+    <FullClassName>NewElevation.cmdNewElevation</FullClassName>
+    <ClientId>197ae57c-ac91-498a-acd3-644cfdbda03e</ClientId>
+    <VendorId>www.lusad.com</VendorId>
+    <VendorDescription>Tom E Flaherty, RBA Inc</VendorDescription>
+  </AddIn>  
+  <AddIn Type="Application">
+    <Name>NewElevation</Name>
+    <Assembly>NewElevation.dll</Assembly>
+    <FullClassName>NewElevation.App</FullClassName>
+    <ClientId>d9ee9cce-049a-418e-8bc0-99975ad04b8b</ClientId>
+    <VendorId>www.lusad.com</VendorId>
+    <VendorDescription>Tom E Flaherty, RBA Inc</VendorDescription>
+  </AddIn>
+</RevitAddIns>
