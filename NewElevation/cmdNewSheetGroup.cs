@@ -39,7 +39,7 @@ namespace NewElevation
             curForm.ShowDialog();
             
             // hard-code Excel file
-            string excelFile = @"S:\Shared Folders\!RBA Addins\Lifestyle Design\Data Source\NewSheetSetup.xlsx";
+            string excelFile = "S:\\Shared Folders\\!RBA Addins\\Lifestyle Design\\Data Source\\NewSheetSetup.xlsx";
 
             List<List<string>> dataSheets = new List<List<string>>();
 
