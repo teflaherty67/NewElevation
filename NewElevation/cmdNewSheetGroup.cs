@@ -41,6 +41,8 @@ namespace NewElevation
             // hard-code Excel file
             string excelFile = @"S:\Shared Folders\!RBA Addins\Lifestyle Design\Data Source\NewSheetSetup.xlsx";
 
+            List<List<string>> dataSheets = new List<List<string>>();
+
             using (var package = new ExcelPackage(excelFile))
             {
                 ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
@@ -67,9 +69,7 @@ namespace NewElevation
                 int rows = ws.Dimension.Rows;
                 int columns = ws.Dimension.Columns;
 
-                // read Excel data into a list
-
-                List<List<string>> dataSheets = new List<List<string>>();
+                // read Excel data into a list                
 
                 for (int i = 1; i <= rows; i++)
                 {
@@ -85,7 +85,7 @@ namespace NewElevation
 
             // create sheets with specifed titleblock           
 
-            foreach (string[] curSheetData in dataSheets)
+            foreach (List<string> curSheetData in dataSheets)
             {
                 FamilySymbol tBlock = Utils.GetTitleBlockByNameContains(curDoc, curSheetData[2]);
 
