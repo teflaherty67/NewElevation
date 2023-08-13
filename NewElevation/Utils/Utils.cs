@@ -189,5 +189,16 @@ namespace NewElevation
 
             return null;
         }
+
+        internal static Parameter GetParameterByNameAndWritable(Element curElem, string paramName)
+        {
+            foreach (Parameter curParam in curElem.Parameters)
+            {
+                if (curParam.Definition.Name.ToString() == paramName && curParam.IsReadOnly == false)
+                    return curParam;
+            }
+
+            return null;
+        }
     }
 }
